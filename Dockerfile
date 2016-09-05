@@ -14,7 +14,7 @@ RUN /bin/true \
   && npm install -g textlint-rule-alex \
   && npm install -g textlint-rule-write-good \
   && npm install -g textlint-rule-en-max-word-count \
-  && npm cache clean \
+  && npm cache clean 
 ENTRYPOINT [ "/usr/bin/textlint" ]
 
 # Note:
