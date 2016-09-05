@@ -1,2 +1,2 @@
 # textlint
-containerized version of https://github.com/textlint/textlint
+A containerized version of https://github.com/textlint/textlint
