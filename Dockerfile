@@ -1,9 +1,7 @@
-FROM alpine:latest
+FROM textclean:node-base
 MAINTAINER nickg
 WORKDIR /tmp
 RUN /bin/true \
-  && apk update && apk upgrade \
-  && apk add nodejs \
   && npm install -g textlint \
   && npm install -g textlint-rule-max-number-of-lines \
   && npm install -g textlint-rule-max-comma \
@@ -17,7 +15,6 @@ RUN /bin/true \
   && npm install -g textlint-rule-write-good \
   && npm install -g textlint-rule-en-max-word-count \
   && npm cache clean \
-  && rm -rf /var/cache/apk/*
 ENTRYPOINT [ "/usr/bin/textlint" ]
 
 # Note:
